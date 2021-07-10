@@ -10,8 +10,10 @@ const store = createStore(
   reducers,
   initialState,
   compose(
-    middlewares,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    middlewares
+    // For Redux browser extension
+    // Remove this for build production or when using vscode debugger extension
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 
